@@ -13,7 +13,7 @@ forecast_from = datetime.time(6, 00)  # 6am local time
 forecast_to = datetime.time(22, 00)  # 10pm local time
 
 emoji = {
-    "clear-day": "\U0001F31E",
+    "clear-day": "\U00002600",
     "clear-night": "\U0001F30C",
     "rain": "\U0001F327",
     "snow": "\U00002744",
@@ -22,7 +22,7 @@ emoji = {
     "fog": "\U0001F32B",
     "cloudy": "\U00002601",
     "partly-cloudy-day": "\U000026C5",
-    "partly-cloudy-night": "\U0001F31A"
+    "partly-cloudy-night": "\U0001F318"
 }
 
 
