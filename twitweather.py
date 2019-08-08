@@ -10,7 +10,7 @@ ds_apiparams = {'exclude': 'alerts,currently,minutely', 'units': 'ca'}
 post_time = datetime.time(6, 00)  # 6am local time
 post_time_tol_seconds = 5 * 60
 forecast_from = datetime.time(6, 00)  # 6am local time
-forecast_to = datetime.time(22, 00)  # 10pm local time
+forecast_to = datetime.time(23, 00)  # 11pm local time
 
 emoji = {
     "clear-day": "\U00002600",
@@ -81,6 +81,11 @@ def describe_wx():
     
     print(forecast)
     forecast = [ emoji.get(item,item) for item in forecast ]
+    
+    # insert breaks in list to help with readability
+    forecast[12:12] = ["  "]
+    forecast[6:6] = ["  "]
+
     forecast = "".join(forecast)
     hi_temp = wx['daily']['data'][0]['temperatureHigh']
     hi_temp = " \U0001F321" + str(round(hi_temp))
